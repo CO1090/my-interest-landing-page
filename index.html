@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mercedes-Benz Fanatics</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 30px;
+        box-sizing: border-box;
+      }
+      body {
+        background: radial-gradient(
+          rgb(32, 38, 57) 11.4%,
+          rgb(63, 76, 119) 70.2%
+        );
+      }
+
+      .container {
+        margin: 50px;
+      }
+
+      h1,
+      h2 {
+        color: #fff;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        text-align: center;
+      }
+      .firstHeadline {
+        font-size: 40px;
+        font-weight: 300;
+        max-height: 500px;
+        margin: 50px, 0, 30px, 0;
+      }
+
+      .slogan {
+        font-size: 30px;
+        font-weight: 100;
+        font-style: italic;
+        max-width: 400px;
+        margin: 0 auto;
+        border-top: inset;
+        border-bottom: inset;
+        border-radius: 4px;
+        padding: 10px;
+      }
+
+      hr {
+        height: 10px;
+        border: 0;
+        box-shadow: 0 10px 10px -10px #8c8b8b inset;
+      }
+
+      img {
+        max-width: 90%;
+        display: block;
+        margin: 0 auto;
+        border-radius: 20px;
+      }
+
+      p {
+        color: #fff;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 20px;
+      }
+      em {
+        margin: 0 auto;
+        padding: 0 auto;
+      }
+
+      a {
+        color: #999999;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        display: block;
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+        transition: all 200ms ease-in-out;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        padding: 15px;
+        border: 1px solid #999999;
+        border-radius: 15px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        background-color: #999999;
+        color: #fff;
+        border: 1px solid #fff;
+      }
+
+      .tag {
+        color: #999999;
+        margin-top: 15%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="firstHeadline">Mercedes-Benz Fanatics</h1>
+      <h2 class="slogan">'For The Love Of Luxury'</h2>
+      <hr />
+
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/802/original/2024_Mercedes-Benz_EQG.jpeg?1673125601"
+        alt="2024 Mercedes-Benz EQG"
+      />
+
+      <hr />
+      <p>
+        Mercedes-Benz creates cars that <em>ooze</em> with elegance and luxury
+        like no other. From their iconic grilles to the well-crafted interiors
+        and powerful engines, Mercedes-Benz cars are the epitome of luxury! With
+        the finest materials and the latest in advanced technology,
+        Mercedes-Benz cars provide drivers with a luxurious, smooth ride. With a
+        variety of models and options avaliable, you can customise your
+        Mercedes-Benz to create your own experience of comfort, luxury and
+        power! Choose Mercedes-Benz and experience a truly luxurious ride!
+      </p>
+      <a href="https://www.mercedes-benz.com/en/" target="_blank"
+        >The Official Website For Mercedes-Benz Vehicles</a
+      >
+
+      <button class="member-btn">Become a member!</button>
+      <p class="tag"><strong>This page was coded by Chisom Okoro</strong></p>
+    </div>
+
+    <script>
+      function member() {
+        let name = prompt("What is your full name?");
+        let email = prompt("What is your email address?");
+        let emailCheck = email.includes("@");
+        let heading = document.querySelector("h2");
+
+        if ((email = emailCheck)) {
+          heading.innerHTML = `Thank you ${name}. <br> We'll be in touch!`;
+        } else {
+          alert("Enter email address to be kept in the loop!");
+          member();
+        }
+      }
+      let memberButton = document.querySelector(".member-btn");
+      memberButton.addEventListener("click", member);
+    </script>
+  </body>
+</html>
